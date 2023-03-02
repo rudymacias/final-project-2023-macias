@@ -5,7 +5,35 @@ body {
 	font-family: "Arvo", serif;
 }
 
+/* Global */
+
+img {
+	max-width: 100%;
+}
+
+.btn {
+	width: max-content;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 1rem 2rem;
+	background: #4ECDC4;
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 1rem;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
 /* Navigation */
+
+nav {
+	width: 100vw;
+	position: absolute;
+}
 
 nav ul {
 	list-style: none;
@@ -23,4 +51,57 @@ nav ul li:first-child {
 	margin-right: auto;
 }
 
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+	nav ul {
+		margin: 1rem;
+		flex-direction: column;
+	}
+
+	nav ul li {
+		margin-left: 0;
+	}
+}
+
 /* Hero */
+
+section.hero {
+	width: 100vw;
+	height: 100vh;
+	background: #000;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: url("../images/hero-background.jpg");
+	background-size: cover;
+	padding-left: 3rem;
+}
+
+section.hero h1 {
+	font-size: 3rem;
+	color: #FFE66D;
+	max-width: 25rem;
+}
+
+section.hero img.ad {
+	width: 15rem;
+	position: absolute;
+	bottom: 3rem;
+	right: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+	section.hero {
+		height: 30rem;
+		padding-left: 1rem;
+	}
+
+	section.hero h1 {
+		font-size: 2rem;
+	}
+}
